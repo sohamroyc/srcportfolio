@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Soham Roy Chowdhury, a C++ programmer and presentation designer.">
@@ -3424,6 +3425,48 @@
         .project-slide-content { padding: 1.2rem 1.2rem 2rem 1.2rem; align-items: center; text-align: center; }
         .project-slide-title { font-size: 1.3rem; }
         .project-slide-desc, .project-slide-features li { font-size: 0.95rem; }
+    }
+    @media (max-width: 600px) {
+        body {
+            font-size: 15px;
+            padding: 0 2vw;
+        }
+        .main-container, .about-section, .skills-section, .certifications-section, .services-section, .goals-section, .projects-section, .blog-section {
+            padding: 1.2rem 0.5rem;
+        }
+        h1, h2, h3 {
+            font-size: 1.2rem;
+        }
+        .certifications-grid, .skills-grid {
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+        }
+        .certification-card, .skill-card {
+            padding: 1rem;
+            font-size: 1rem;
+        }
+        .project-slide-img img {
+            max-width: 98vw;
+            max-height: 180px;
+        }
+        .project-slide-content {
+            padding: 1rem 0.5rem;
+        }
+        .carousel-arrow {
+            width: 36px;
+            height: 36px;
+            font-size: 1.1rem;
+        }
+        .carousel-dots .dot {
+            width: 10px;
+            height: 10px;
+        }
+        .back-to-top {
+            right: 10px;
+            bottom: 10px;
+            width: 36px;
+            height: 36px;
+        }
     }
     </style>
     <script>
