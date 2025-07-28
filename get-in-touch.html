@@ -1,0 +1,53 @@
+<!-- Get in Touch Section with Animated Headings and Modal -->
+<section class="get-in-touch-section" id="get-in-touch-section">
+  <div class="animated-headings">
+    <h2 class="heading-left">FROM CONCEPT TO</h2>
+    <h2 class="heading-right">CREATION<br>LET'S MAKE IT HAPPEN!</h2>
+  </div>
+  <button class="get-in-touch-btn" id="open-contact-modal">Get In Touch</button>
+</section>
+<div class="contact-modal" id="contact-modal">
+  <div class="contact-modal-content">
+    <button class="close-modal" id="close-contact-modal">&times;</button>
+    <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem; color: #fff;">Quick connect</h3>
+    <div style="display: flex; justify-content: flex-start; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+      <button style="background: linear-gradient(90deg, #64ffda 0%, #a78bfa 100%); color: #23272e; border: none; border-radius: 12px; padding: 8px 24px; font-weight: 600; font-size: 1rem; cursor: pointer;">Fill a form</button>
+    </div>
+    <form class="contact-form" style="border: 1.5px solid #00bfff; border-radius: 12px; padding: 1.5rem; background: transparent; margin-bottom: 1rem;">
+      <div style="display: flex; gap: 2rem; margin-bottom: 2rem;">
+        <div style="flex: 1;">
+          <label for="name" style="color: #00bfff; font-size: 1rem; margin-bottom: 0.3rem; display: block;">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required style="width: 100%; padding: 1rem; border-radius: 8px; border: 1px solid #00bfff; background: transparent; color: #fff; font-size: 1rem; margin-bottom: 0.5rem;">
+        </div>
+        <div style="flex: 1; position: relative;">
+          <label for="email" style="color: #00bfff; font-size: 1rem; margin-bottom: 0.3rem; display: block;">Email</label>
+          <input type="email" id="email" name="email" placeholder="your.email@example.com" required style="width: 100%; padding: 1rem; border-radius: 8px; border: 1px solid #00bfff; background: transparent; color: #fff; font-size: 1rem; margin-bottom: 0.5rem;">
+          <span style="position: absolute; right: 10px; top: 38px; color: #00bfff; font-size: 0.9rem; pointer-events: none;">your.email@example.co</span>
+        </div>
+      </div>
+      <div style="margin-bottom: 1rem;">
+        <label for="message" style="color: #00bfff; font-size: 1rem; margin-bottom: 0.7rem; display: block;">Message</label>
+        <textarea id="message" name="message" placeholder="What would you like to discuss?" maxlength="1000" required style="width: 100%; padding: 1rem; border-radius: 8px; border: 1px solid #00bfff; background: transparent; color: #fff; font-size: 1rem; height: 140px; margin-bottom: 0.7rem;"></textarea>
+        <div style="text-align: right; color: #00bfff; font-size: 0.9rem; margin-bottom: 1.2rem;">0/1000</div>
+      </div>
+      <button type="submit" style="background: linear-gradient(90deg, #64ffda 0%, #a78bfa 100%); color: #23272e; border: none; border-radius: 8px; padding: 10px 0; font-weight: 600; font-size: 1rem; width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 0.5rem;">
+        <i class="fa-solid fa-paper-plane"></i> Send message
+      </button>
+      <div id="contact-success" style="display:none; color:#64ffda; text-align:center; margin-top:1rem; font-size:1.1rem;">Thank you! Your message has been sent.</div>
+    </form>
+    <script>
+      document.querySelector('.contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('contact-success').style.display = 'block';
+        setTimeout(function() {
+          document.getElementById('contact-success').style.display = 'none';
+          document.getElementById('contact-modal').classList.remove('active');
+          document.getElementById('modal-backdrop').classList.remove('active');
+          e.target.reset();
+        }, 2000);
+      });
+    </script>
+    </form>
+  </div>
+</div>
+<div class="modal-backdrop" id="modal-backdrop"></div> 
